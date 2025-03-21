@@ -1,0 +1,1676 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-10-03T17:27:43.046Z",
+  "__export_source": "insomnia.desktop.app:v2021.6.0",
+  "resources": [
+    {
+      "_id": "req_f39b8fa941a641179fb4239878e087ad",
+      "parentId": "fld_98cf77fe2d8c488791973a9f6b7d09cb",
+      "modified": "1637671845661",
+      "created": 1682782313691,
+      "url": "{{ _.base_url }}/users",
+      "name": "Index",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"page\": 1,\n\t\"per_page\": 10,\n\t\"sort\": \"role\",\n\t\"dir\": \"asc\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_ad81ebd9eb5e443d829dafb408076d30"
+        },
+        {
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_4a889d1661a44c2eb009d97d9e35f82f"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_f1f636d415a24db3805c5df1eefec7ff"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_d98efb61790e4eb5bbfcfafc4032e152"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642948395626,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_98cf77fe2d8c488791973a9f6b7d09cb",
+      "parentId": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "modified": "1637671845661",
+      "created": 1682782313690,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642948389724,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1682782313659,
+      "name": "PG-CORE",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1000000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "__WORKSPACE_ID__",
+      "parentId": null,
+      "modified": "1637671845661",
+      "created": 1682782313647,
+      "name": "Perene Goals",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_361fdf6a06d44ce18fdfc013f4fb2634",
+      "parentId": "fld_98cf77fe2d8c488791973a9f6b7d09cb",
+      "modified": "1637671845661",
+      "created": 1682782313693,
+      "url": "{{ _.base_url }}/users/",
+      "name": "Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [
+        {
+          "name": "id",
+          "value": "8",
+          "description": "",
+          "id": "pair_5686997d8ef24c4b9344f725b4654a25"
+        }
+      ],
+      "headers": [
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_ad81ebd9eb5e443d829dafb408076d30"
+        },
+        {
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_4a889d1661a44c2eb009d97d9e35f82f"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_f1f636d415a24db3805c5df1eefec7ff"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642817080644,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_bda134fb5c144ad0a05123b71c061ab6",
+      "parentId": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "modified": "1637671845661",
+      "created": 1683473528533,
+      "url": "{{ _.base_url }}/all-goals-list",
+      "name": "List Public",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_435ed87490614bf6b9bd9589a284a40a",
+          "name": "page",
+          "value": "1",
+          "description": ""
+        },
+        {
+          "id": "pair_91862d3a20de4672a9a289b5e4ed7d50",
+          "name": "per_page",
+          "value": "10",
+          "description": ""
+        },
+        {
+          "id": "pair_62ba2f7fdb794056bf7f8ded3c6f59ab",
+          "name": "",
+          "value": "",
+          "description": ""
+        },
+        {
+          "id": "pair_fc9be3a7963c43f3986d170d0fd90668",
+          "name": "sort",
+          "value": "created_at",
+          "description": ""
+        },
+        {
+          "id": "pair_335b99000fa14af99ac322c20dc68ec4",
+          "name": "dir",
+          "value": "desc",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1675822253799.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "parentId": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "modified": "1637671845661",
+      "created": 1683472584801,
+      "name": "Goals List",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683472584801,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_14bcd3823cd74d0aa375213dc25721e8",
+      "parentId": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "modified": "1637671845661",
+      "created": 1683481710465,
+      "url": "{{ _.base_url }}/goals-list",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Exercise Regularly\",\n\t\"description\": \"Commit to a consistent exercise routine to improve your fitness and overall health.\",\n\t\"is_public\": true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        },
+        {
+          "id": "pair_23e667716aac4a6ba755eef5d77bd233",
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253849.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ed78280ca795444180b7f7eec48df379",
+      "parentId": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "modified": "1637671845661",
+      "created": 1683481751630,
+      "url": "{{ _.base_url }}/goals-list/18",
+      "name": "Show One with Goals",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1671997086835.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d6218436133947b0802ed5d26ccc8a90",
+      "parentId": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "modified": "1637671845661",
+      "created": 1685800442282,
+      "url": "{{ _.base_url }}/my-goals-list",
+      "name": "List My",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"page\": 1,\n\t\"per_page\": 10,\n\t\"sort\": \"created_at\",\n\t\"dir\": \"desc\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5e3cb3a715604bfdb073207721ce2fe1"
+        },
+        {
+          "id": "pair_349497ecd5ee4b6d9abdf081a82d07a6",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_65276a6fbb31487cbe9125aab718ec20",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_b627b20131774cb28907e573fa7fbcd2",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1673909670317.625,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f857339026bf4f818514d9144ed5454c",
+      "parentId": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "modified": "1637671845661",
+      "created": 1688218784894,
+      "url": "{{ _.base_url }}/goals-list/18",
+      "name": "Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253899.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ae49c47caa11470e92341f3cc4fc4144",
+      "parentId": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "modified": "1637671845661",
+      "created": 1690804826719,
+      "url": "{{ _.base_url }}/goals-list/24/clone",
+      "name": "Clone",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253837,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1cc6cce8d88740a7a4059158cddf7d3d",
+      "parentId": "fld_2633fda37b4c47f081ecaafd7fc4732d",
+      "modified": "1637671845661",
+      "created": 1690978071399,
+      "url": "{{ _.base_url }}/goals-list/24/vote",
+      "name": "Vote",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"votes_up\": 1,\n\t\"vote_down\": 0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        },
+        {
+          "id": "pair_23e667716aac4a6ba755eef5d77bd233",
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253843.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_14c3f623dd1c4d529649e229495de57d",
+      "parentId": "fld_fd56a154ae1e461398e19f9f8ee02238",
+      "modified": "1637671845661",
+      "created": 1683472587727,
+      "url": "{{ _.base_url }}/goals-list/11/goals",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n \"title\": \"Experience the Beauty of Brazil\",\n  \"description\": \"I want to experience the vibrant rhythms and natural beauty of Brazil. I will dance the samba during Carnival in Rio de Janeiro, relax on the stunning beaches of Copacabana, and explore the vibrant neighborhoods of São Paulo. I am eager to venture into the Amazon rainforest, witness the breathtaking Iguazu Falls, and embrace the warmth of Brazilian hospitality.\",\n\t\"time_to_reach_in_days\": 7\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        },
+        {
+          "id": "pair_23e667716aac4a6ba755eef5d77bd233",
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683472587727,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_fd56a154ae1e461398e19f9f8ee02238",
+      "parentId": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "modified": "1637671845661",
+      "created": 1683479478882,
+      "name": "Goals",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683479478882,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_119012c4365247959c5b1b930935b96f",
+      "parentId": "fld_fd56a154ae1e461398e19f9f8ee02238",
+      "modified": "1637671845661",
+      "created": 1686341233942,
+      "url": "{{ _.base_url }}/goals/10/steps",
+      "name": "Show One with Steps",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683472587677,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_c77fd144120e4ee0b78d5eede1c8584b",
+      "parentId": "fld_fd56a154ae1e461398e19f9f8ee02238",
+      "modified": "1637671845661",
+      "created": 1686858785681,
+      "url": "{{ _.base_url }}/goals/10",
+      "name": "Update",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"started\": false,\n  \"start_at\": \"2023-06-03T19:38:47.587Z\",\n\t\"completed\": false,\n\t\"completed_at\": \"2023-06-03T19:38:47.587Z\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        },
+        {
+          "id": "pair_23e667716aac4a6ba755eef5d77bd233",
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683472587702,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b982f8d2b3ca4606b501ca1f1c0a6578",
+      "parentId": "fld_fd56a154ae1e461398e19f9f8ee02238",
+      "modified": "1637671845661",
+      "created": 1688218613536,
+      "url": "{{ _.base_url }}/goals/24",
+      "name": "Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1683472587689.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_2a33fc23730a46c6b25a6efe8b93e11a",
+      "parentId": "fld_6dd2d4bd476c4349a17498e526e2013f",
+      "modified": "1637671845661",
+      "created": 1685798546178,
+      "url": "{{ _.base_url }}/goals/10/steps",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Learn Basic Japanese Phrases\",\n  \"description\": \"Start learning common Japanese phrases and expressions to help with basic communication during your trip.\",\n  \"time_to_reach_in_days\": 0,\n  \"time_to_reach_in_hours\": 0,\n  \"time_to_reach_in_minutes\": 30\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        },
+        {
+          "id": "pair_23e667716aac4a6ba755eef5d77bd233",
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253849.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_6dd2d4bd476c4349a17498e526e2013f",
+      "parentId": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "modified": "1637671845661",
+      "created": 1685798546147,
+      "name": "Goals Steps",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1683476031841.5,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_808ba28109034acf83899a7a9e82a6d1",
+      "parentId": "fld_6dd2d4bd476c4349a17498e526e2013f",
+      "modified": "1637671845661",
+      "created": 1686859952757,
+      "url": "{{ _.base_url }}/goals-step/50",
+      "name": "Update",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"started\": true,\n  \"start_at\": \"2023-06-03T19:38:47.587Z\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        },
+        {
+          "id": "pair_23e667716aac4a6ba755eef5d77bd233",
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253899.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_471b3335799d49568511ceb6c5fbb3f2",
+      "parentId": "fld_6dd2d4bd476c4349a17498e526e2013f",
+      "modified": "1637671845661",
+      "created": 1688219477457,
+      "url": "{{ _.base_url }}/goals-step/25",
+      "name": "Delete",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253874.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_46041ad2640f4a5881243103bebe7daf",
+      "parentId": "fld_6dd2d4bd476c4349a17498e526e2013f",
+      "modified": "1637671845661",
+      "created": 1689163662165,
+      "url": "{{ _.base_url }}/goals-step/39",
+      "name": "Show",
+      "description": "",
+      "method": "GET",
+      "body": {
+        "mimeType": "application/json",
+        "text": ""
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        },
+        {
+          "id": "pair_23e667716aac4a6ba755eef5d77bd233",
+          "name": "Content-Type",
+          "value": "application/json",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1675822253824.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_446b5ac668c7454589ae0b99afae06fc",
+      "parentId": "fld_2b7a58c3fed84e7a83d9603f8bf9c4a5",
+      "modified": "1637671845661",
+      "created": 1689337732945,
+      "url": "{{ _.base_url }}/learning",
+      "name": "List all",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_0f14ed20ce6d4e0f9f0a91d96e95f8e0",
+          "name": "page",
+          "value": "1",
+          "description": ""
+        },
+        {
+          "id": "pair_849f0a2024b84d1faa82c2f396b7288d",
+          "name": "per_page",
+          "value": "10",
+          "description": ""
+        },
+        {
+          "id": "pair_1f12dd1482d447f7a5aee20e8c075d9a",
+          "name": "sort",
+          "value": "created_at",
+          "description": ""
+        },
+        {
+          "id": "pair_03048f95102a4d13b76cd0e1974c589d",
+          "name": "dir",
+          "value": "asc",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1689337732945,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_2b7a58c3fed84e7a83d9603f8bf9c4a5",
+      "parentId": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "modified": "1637671845661",
+      "created": 1689337730300,
+      "name": "Learning",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1689337730300,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_162ea15606504d42b1287209d8b88d44",
+      "parentId": "fld_2b7a58c3fed84e7a83d9603f8bf9c4a5",
+      "modified": "1637671845661",
+      "created": 1689337953310,
+      "url": "{{ _.base_url }}/learning/1",
+      "name": "Show one",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1686405160336,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_97bbfd6761b34e2eb3d20bba6b062c22",
+      "parentId": "fld_2b7a58c3fed84e7a83d9603f8bf9c4a5",
+      "modified": "1637671845661",
+      "created": 1689337973615,
+      "url": "{{ _.base_url }}/learning",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Hyperfocus: How to Manage Your Attention in a World of Distraction\",\n\t\"description\": \"<!DOCTYPE html>\\n<html>\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <title>Hyperfocus: How to Manage Your Attention in a World of Distraction</title>\\n</head>\\n<body>\\n    <p>\\n        &quot;Hyperfocus: How to Manage Your Attention in a World of Distraction&quot; by Chris Bailey is a thought-provoking book that offers valuable insights into managing attention and combating the distractions of the modern world. In today's fast-paced society, it's becoming increasingly challenging to focus on what truly matters. However, Chris Bailey presents practical strategies and techniques to help you regain control of your attention and harness the power of hyperfocus.\\n    </p>\\n\\n    <p>\\n        As someone who has personally struggled with maintaining focus amidst constant distractions, I found this book to be a game-changer. Bailey's research-backed advice and actionable tips have transformed the way I work, study, and engage with the world around me.\\n    </p>\\n\\n    <p>\\n        The concept of hyperfocus is about directing your attention to a single task or objective with intense concentration and clarity. By immersing yourself in a state of hyperfocus, you can achieve higher productivity, enhanced creativity, and a deeper sense of fulfillment. Bailey delves into the science behind attention and provides practical techniques to help you cultivate this invaluable skill.\\n    </p>\\n\\n    <p>\\n        Throughout the book, Bailey shares relatable anecdotes, case studies, and research findings to illustrate the transformative power of hyperfocus. He explores the importance of managing distractions, creating effective routines, and structuring your environment to optimize focus. Whether you're a student, professional, or simply seeking to lead a more intentional life, this book will equip you with the tools to navigate the digital age and make the most of your precious attention.\\n    </p>\\n\\n    <h3>Master Your Attention and Achieve Extraordinary Results</h3>\\n\\n    <p>\\n        Imagine being able to work on important projects without constant interruptions. Picture yourself fully engaged in conversations and enjoying deeper connections with others. Envision the satisfaction of completing tasks with greater efficiency and accuracy. This is the power of hyperfocus.\\n    </p>\\n\\n    <p>\\n        Bailey's insights go beyond simple time management techniques. He explores the interplay between attention, productivity, creativity, and well-being. By adopting the principles of hyperfocus, you'll be able to seize opportunities, solve complex problems, and lead a more meaningful and fulfilling life.\\n    </p>\\n\\n    <p>\\n        Now is the time to take control of your attention and reclaim your focus. Dive into &quot;Hyperfocus: How to Manage Your Attention in a World of Distraction&quot; and embark on a transformative journey towards a more mindful, productive, and balanced existence. Let the wisdom of Chris Bailey guide you towards achieving extraordinary results in an increasingly distracting world.\\n    </p>\\n\\n    <p>\\n        Get your copy of &quot;Hyperfocus: How to Manage Your Attention in a World of Distraction&quot; by Chris Bailey and embark on a transformative journey towards a more mindful, productive, and balanced existence. Harness the power of hyperfocus and unlock your full potential.\\n    </p>\\n</body>\\n</html>\\n\",\n\t\"author\": \"Chris Bailey\",\n\t\"image_link\": \"https://m.media-amazon.com/images/I/41dMf+HwD2L._SX331_BO1,204,203,200_.jpg\",\n\t\"reference_link\": \"https://amzn.to/3pEjNC6\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1684938874031.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_aec33d91fd8b4f9b97c0d26eac6f35ad",
+      "parentId": "fld_2b7a58c3fed84e7a83d9603f8bf9c4a5",
+      "modified": "1637671845661",
+      "created": 1689340641378,
+      "url": "{{ _.base_url }}/learning/1",
+      "name": "Update",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"Hyperfocus: How to Manage Your Attention in a World of Distraction\",\n\t\"description\": \"<p>\\n        &quot;Hyperfocus: How to Manage Your Attention in a World of Distraction&quot; by Chris Bailey is a thought-provoking book that offers valuable insights into managing attention and combating the distractions of the modern world. In today's fast-paced society, it's becoming increasingly challenging to focus on what truly matters. However, Chris Bailey presents practical strategies and techniques to help you regain control of your attention and harness the power of hyperfocus.\\n    </p>\\n\\n    <p>\\n        As someone who has personally struggled with maintaining focus amidst constant distractions, I found this book to be a game-changer. Bailey's research-backed advice and actionable tips have transformed the way I work, study, and engage with the world around me.\\n    </p>\\n\\n    <p>\\n        The concept of hyperfocus is about directing your attention to a single task or objective with intense concentration and clarity. By immersing yourself in a state of hyperfocus, you can achieve higher productivity, enhanced creativity, and a deeper sense of fulfillment. Bailey delves into the science behind attention and provides practical techniques to help you cultivate this invaluable skill.\\n    </p>\\n\\n    <p>\\n        Throughout the book, Bailey shares relatable anecdotes, case studies, and research findings to illustrate the transformative power of hyperfocus. He explores the importance of managing distractions, creating effective routines, and structuring your environment to optimize focus. Whether you're a student, professional, or simply seeking to lead a more intentional life, this book will equip you with the tools to navigate the digital age and make the most of your precious attention.\\n    </p>\\n\\n    <h3>Master Your Attention and Achieve Extraordinary Results</h3>\\n\\n    <p>\\n        Imagine being able to work on important projects without constant interruptions. Picture yourself fully engaged in conversations and enjoying deeper connections with others. Envision the satisfaction of completing tasks with greater efficiency and accuracy. This is the power of hyperfocus.\\n    </p>\\n\\n    <p>\\n        Bailey's insights go beyond simple time management techniques. He explores the interplay between attention, productivity, creativity, and well-being. By adopting the principles of hyperfocus, you'll be able to seize opportunities, solve complex problems, and lead a more meaningful and fulfilling life.\\n    </p>\\n\\n    <p>\\n        Now is the time to take control of your attention and reclaim your focus. Dive into &quot;Hyperfocus: How to Manage Your Attention in a World of Distraction&quot; and embark on a transformative journey towards a more mindful, productive, and balanced existence. Let the wisdom of Chris Bailey guide you towards achieving extraordinary results in an increasingly distracting world.\\n    </p>\\n\\n    <p>\\n        Get your copy of &quot;Hyperfocus: How to Manage Your Attention in a World of Distraction&quot; by Chris Bailey and embark on a transformative journey towards a more mindful, productive, and balanced existence. Harness the power of hyperfocus and unlock your full potential.\\n    </p>\",\n\t\"author\": \"Fábio R. Nóbrega\",\n\t\"image_link\": \"http://goals.perene.tech/banners/hyper-focus.jpg\",\n\t\"reference_link\": \"https://amzn.to/3YIzUEx\"\n}\n"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1684205730879.25,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_36cb2e51182a48aba5aff915f04aa2c1",
+      "parentId": "fld_79fb02135ee940afb981982761ea75c2",
+      "modified": "1637671845661",
+      "created": 1689680967845,
+      "url": "{{ _.base_url }}/metrics/goal/30",
+      "name": "Show Goals Metrics",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1670084503353.875,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_79fb02135ee940afb981982761ea75c2",
+      "parentId": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "modified": "1637671845661",
+      "created": 1689680855484,
+      "name": "Metrics",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1689680855484,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_f0362d85f14a4056ba8d68e3175286fc",
+      "parentId": "fld_79fb02135ee940afb981982761ea75c2",
+      "modified": "1637671845661",
+      "created": 1689681249595,
+      "url": "{{ _.base_url }}/metrics/goal-list/20",
+      "name": "Show Goals List Metrics",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_3696dd82ac294cd6bcea9a81607d39cd",
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": ""
+        },
+        {
+          "id": "pair_225000d862854495bd0f223a6e7de392",
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": ""
+        },
+        {
+          "id": "pair_d436fbef335648faa559677d220239ad",
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1669128211612.9375,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8abc55cd098c41e081d5b3a809c356d5",
+      "parentId": "fld_e5ca58c1a0034e2fb96fc297b4728cd9",
+      "modified": "1637671845661",
+      "created": 1682782313682,
+      "url": "{{ _.base_url }}/auth",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"{{ _.email }}\",\n\t\"password\": \"{{ _.password }}\", \n\t\"password_confirmation\": \"{{ _.password }}\",\n\t\"name\": \"Visitante\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_2e143ae637524934be580c69b3d17fa9"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642365281947,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e5ca58c1a0034e2fb96fc297b4728cd9",
+      "parentId": "fld_817ae613e55d40ffbffe1c54d0bd8bd8",
+      "modified": "1637671845661",
+      "created": 1682782313661,
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642365265911,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_817ae613e55d40ffbffe1c54d0bd8bd8",
+      "parentId": "fld_7964d3e4b2014941a064bf9ef289f1e3",
+      "modified": "1637671845661",
+      "created": 1682782313660,
+      "name": "Auth",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642365257350,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_b1c6c74432ee459fa279eea1d903321f",
+      "parentId": "fld_e5ca58c1a0034e2fb96fc297b4728cd9",
+      "modified": "1637671845661",
+      "created": 1682782313683,
+      "url": "{{ _.base_url }}/auth",
+      "name": "Delete ",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_2d971ec9a5a34307b1b7468e8c5f416b"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_e59bc2cae8be40caab095b4eed3dcc67"
+        },
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_64036f93d4204e5884a83375bd8fdafd"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642367751502,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f178ad8510aa4deeb433071fa4d154b8",
+      "parentId": "fld_e5ca58c1a0034e2fb96fc297b4728cd9",
+      "modified": "1637671845661",
+      "created": 1682782313685,
+      "url": "{{ _.base_url }}/auth",
+      "name": "Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Fábio Rodrigues Nóbrega\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_12f5c9b17dff432f8706a4592363237e"
+        },
+        {
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_79609e30652b47d0be6a9c1b1714f28e"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_febe951d6664431e81d7f9a8c0076767"
+        },
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_0dc83a3b68cb4263b7ae7fb92e05014d"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642367615523.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ff187a02950c467b93238752ee645370",
+      "parentId": "fld_29dc1444a8484c40ab3c9f436582d627",
+      "modified": "1637671845661",
+      "created": 1682782313664,
+      "url": "{{ _.base_url }}/auth/sign_in",
+      "name": "Sign In",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"{{ _.email }}\",\n\t\"password\": \"{{ _.password }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_56104dd7202d44af86e141efb4a732a2"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642367045039,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_29dc1444a8484c40ab3c9f436582d627",
+      "parentId": "fld_e5ca58c1a0034e2fb96fc297b4728cd9",
+      "modified": "1637671845661",
+      "created": 1682782313662,
+      "name": "Session",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642368023459,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_2d939e66a54e4b999c94799a7e0b2cb6",
+      "parentId": "fld_29dc1444a8484c40ab3c9f436582d627",
+      "modified": "1637671845661",
+      "created": 1682782313666,
+      "url": "{{ _.base_url }}/auth/validate_token",
+      "name": "Validade ",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "access_token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_160307ac2a524c5fb8b156f0e9c797f7"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_1c4a74b78f8e42a181c4e773e5fc21d8"
+        },
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_904473a515da4ae89c068c333ad35782"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642367544708,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b325a0cf8ee14f5d9bd26e9c667019f8",
+      "parentId": "fld_29dc1444a8484c40ab3c9f436582d627",
+      "modified": "1637671845661",
+      "created": 1682782313667,
+      "url": "{{ _.base_url }}/auth/sign_out",
+      "name": "Sign Out",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "access_token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_13b3774f87ec4db19f8082277d9690d3"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_6e573490407640bbbeaaaca20f782f0b"
+        },
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_372a650386134a55b4a220f18e4b9ea0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642368044377,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_01204d6b8ff14c3e99a072486fe66e2c",
+      "parentId": "fld_15585ae9376f4cf58bcabe2e42f6573c",
+      "modified": "1637671845661",
+      "created": 1682782313672,
+      "url": "{{ _.base_url }}/auth",
+      "name": "Update",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"current_password\": \"{{ _.password }}\",\n\t\"password\": \"\",\n\t\"password_confirmation\": \"\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_12f5c9b17dff432f8706a4592363237e"
+        },
+        {
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_79609e30652b47d0be6a9c1b1714f28e"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_febe951d6664431e81d7f9a8c0076767"
+        },
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_0dc83a3b68cb4263b7ae7fb92e05014d"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642455158101,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_15585ae9376f4cf58bcabe2e42f6573c",
+      "parentId": "fld_e5ca58c1a0034e2fb96fc297b4728cd9",
+      "modified": "1637671845661",
+      "created": 1682782313670,
+      "name": "Password",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642455394109,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_d27c97df16af406ba256296d1c0ecc99",
+      "parentId": "fld_15585ae9376f4cf58bcabe2e42f6573c",
+      "modified": "1637671845661",
+      "created": 1682782313674,
+      "url": "{{ _.base_url }}/auth/password",
+      "name": "Forget ",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"{{ _.email }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_390cede6186c43fda4d3b65f090938b9"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642455572648,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f52b872c4e664029ace0f039176ab777",
+      "parentId": "fld_15585ae9376f4cf58bcabe2e42f6573c",
+      "modified": "1637671845661",
+      "created": 1682782313677,
+      "url": "{{ _.base_url }}/auth/password",
+      "name": "Reset",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"password\": \"{{ _.password }}\",\n\t\"password_confirmation\": \"{{ _.password }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_12f5c9b17dff432f8706a4592363237e"
+        },
+        {
+          "name": "access-token",
+          "value": "{{ _['access-token'] }}",
+          "description": "",
+          "id": "pair_58fd789d0eec44f08aefbe0e4ed93241"
+        },
+        {
+          "name": "client",
+          "value": "{{ _.client }}",
+          "description": "",
+          "id": "pair_5127386208ca42d39f015ee8624e791c"
+        },
+        {
+          "name": "uid",
+          "value": "{{ _.email }}",
+          "description": "",
+          "id": "pair_6e2b1f0dc395422f89b9ba24807eb971"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642411601239,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b49ef74fb53f48fc85ef9f2998e09944",
+      "parentId": "fld_3ac32dec4872433ca80d732f2aff9f4e",
+      "modified": "1637671845661",
+      "created": 1682782313680,
+      "url": "http://localhost:3000/api/auth/confirmation",
+      "name": "Re-Send",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"{{ _.email }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_a1e3be9e007c444ca67b6be9c57413d0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1642457630489,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_3ac32dec4872433ca80d732f2aff9f4e",
+      "parentId": "fld_e5ca58c1a0034e2fb96fc297b4728cd9",
+      "modified": "1637671845661",
+      "created": 1682782313679,
+      "name": "Confirmation",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1642457599735,
+      "_type": "request_group"
+    },
+    {
+      "_id": "__BASE_ENVIRONMENT_ID__",
+      "parentId": "__WORKSPACE_ID__",
+      "modified": "1637671845661",
+      "created": 1682782313649,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3000/api",
+        "email": "fabio.r.nobrega@gmail.com",
+        "password": "q1w2e3r4t5",
+        "access-token": "hDWfvfs-TEWfR8GLLRXnHw",
+        "client": "pNP5ASeCOgIzHJXzRu3MUw"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "email",
+          "password",
+          "access-token",
+          "client"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1642544097802,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_c6eff627c06e42ee92a1983bc45a05c5",
+      "parentId": "__BASE_ENVIRONMENT_ID__",
+      "modified": "1637671845661",
+      "created": 1682782313649,
+      "name": "Penere Goals",
+      "data": {
+        "base_url": "http://localhost:3000/api",
+        "email": "farno@perene.com",
+        "password": "q1w2e3r4t5",
+        "access-token": "zzfDtk8G2Xk76i2OyiMg_g",
+        "client": "tOSQagLIU86jqDbepADc8w"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "email",
+          "password",
+          "access-token",
+          "client"
+        ]
+      },
+      "color": "#0837a6",
+      "isPrivate": false,
+      "metaSortKey": 1642545273846,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_f2f3e44e39344e5ca6c323d908400c2e",
+      "parentId": "__BASE_ENVIRONMENT_ID__",
+      "modified": "1637671845661",
+      "created": 1691579617823,
+      "name": "PG Production",
+      "data": {
+        "base_url": "http://89.116.214.173:3000/api",
+        "email": "fabio.r.nobrega@gmail.com.br",
+        "password": "q1w2e3r4t5",
+        "access-token": "Ub77hv4SJdD9ZELjF3B7FA",
+        "client": "fElsr6GFPIx0qHFbdHm5pg"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "email",
+          "password",
+          "access-token",
+          "client"
+        ]
+      },
+      "color": "#ff0000",
+      "isPrivate": false,
+      "metaSortKey": 1691579617823,
+      "_type": "environment"
+    }
+  ]
+}
