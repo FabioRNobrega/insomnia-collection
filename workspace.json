@@ -486,7 +486,7 @@
       "parentId": "fld_fd56a154ae1e461398e19f9f8ee02238",
       "modified": "1637671845661",
       "created": 1683472587727,
-      "url": "{{ _.base_url }}/goals-list/11/goals",
+      "url": "{{ _.base_url }}/goals-list/11/goals/:id",
       "name": "Create",
       "description": "",
       "method": "POST",
@@ -524,6 +524,12 @@
       "authentication": {},
       "metaSortKey": -1683472587727,
       "isPrivate": false,
+      "pathParameters": [
+        {
+          "name": "id",
+          "value": ""
+        }
+      ],
       "settingStoreCookies": true,
       "settingSendCookies": true,
       "settingDisableRenderRequestBody": false,
