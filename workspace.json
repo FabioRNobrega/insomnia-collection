@@ -980,7 +980,7 @@
       "parentId": "fld_f941bb141cab4e0eacbde7576c6fd9fe",
       "modified": "1637671845661",
       "created": 1689337973615,
-      "url": "{{ _.base_url }}/learning/:id",
+      "url": "{{ _.base_url }}/learning/:alterado_pelo_newton",
       "name": "Create",
       "description": "",
       "method": "POST",
@@ -1000,7 +1000,7 @@
       "isPrivate": false,
       "pathParameters": [
         {
-          "name": "id",
+          "name": "alterado_pelo_newton",
           "value": ""
         }
       ],
